@@ -1,0 +1,18 @@
+$('#contact').bind('ajax:success', function(type, data, status, xhr){
+	var area = $('#contact-area');
+	if(area.html() == ''){
+		area.html(data);
+	}else{
+		area.html('');
+	}
+});
+
+$('#afp').bind('ajax:success', function(type, data, status, xhr){
+	var area = $('#afp-area');
+	if(area.html() == ''){
+		area.html(data);
+	}else{
+		area.html('');
+	}
+});
+

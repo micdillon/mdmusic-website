@@ -1,0 +1,15 @@
+<%= image_tag "mdlogo.jpg", :id => "logo" %>
+
+<div id="discog-link">Discography</div>
+
+<div id="afp-link">
+	<%= link_to "Audio For Pictures", afp_frontend_path, :remote => true, 'data-type' => 'html', :id => 'afp' %>
+</div>
+<div id="afp-area"></div>
+
+<div id="contact-link">
+	<%= link_to "Contact", contact_frontend_path, :remote => true, 'data-type' => 'html', :id => 'contact' %>
+</div>
+<div id="contact-area"></div>
+
+<script><%= render "index.js" %></script>

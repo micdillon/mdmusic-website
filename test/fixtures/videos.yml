@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  title: MyString
+  description: MyText
+  agency: MyString
+  producer: MyString
+  client: 
+
+two:
+  url: MyString
+  title: MyString
+  description: MyText
+  agency: MyString
+  producer: MyString
+  client: 
