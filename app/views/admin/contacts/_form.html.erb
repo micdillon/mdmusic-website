@@ -1,0 +1,29 @@
+<%= form_for(@admin_contact, :url => admin_contact_path(@admin_contact)) do |f| %>
+  <% if @admin_contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @admin_contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
