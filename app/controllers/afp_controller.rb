@@ -1,6 +1,6 @@
 class AfpController < ApplicationController
 	def frontend
-		#@clients = Clients.all
+		@clients = Client.all
 		render 'frontend', :layout => false
 	end
 end

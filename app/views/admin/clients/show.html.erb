@@ -10,6 +10,8 @@
   <%= @client.description %>
 </p>
 
+<%= link_to 'Videos', [:admin, @client, :videos] %> |
 
-<%= link_to 'Edit', edit_admin_client_path(@client) %> |
+<%= link_to 'Edit', [:edit, :admin, @client] %> |
 <%= link_to 'Back', admin_clients_path %>
+

@@ -1,0 +1,30 @@
+<h1>Listing videos for <%= @client.name %></h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Agency</th>
+    <th>Producer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @videos.each do |video| %>
+  <tr>
+    <td><%= video.url %></td>
+    <td><%= video.title %></td>
+    <td><%= video.description %></td>
+    <td><%= video.agency %></td>
+    <td><%= video.producer %></td>
+    <td><%= link_to 'Show', [:admin, @client, video] %></td>
+    <td><%= link_to 'Edit', [:edit, :admin, @client, video] %></td>
+    <td><%= link_to 'Destroy', [:admin, @client, video], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back to Client', [:admin, @client]%>
+

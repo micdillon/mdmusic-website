@@ -1,0 +1,27 @@
+<p>
+  <b>Url:</b>
+  <%= @video.url %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+
+<p>
+  <b>Agency:</b>
+  <%= @video.agency %>
+</p>
+
+<p>
+  <b>Producer:</b>
+  <%= @video.producer %>
+</p>
+
+<%= link_to 'Edit Video', [:edit, :admin, @video.client, @video] %>
+
