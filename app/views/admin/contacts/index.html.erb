@@ -10,15 +10,15 @@
     <th></th>
   </tr>
 
-<% debug @admin_contacts %>
-<% @admin_contacts.each do |admin_contact| %>
+<% debug @contacts %>
+<% @contacts.each do |contact| %>
   <tr>
-    <td><%= admin_contact.bio %></td>
-    <td><%= admin_contact.phone %></td>
-    <td><%= admin_contact.email %></td>
-    <td><%= link_to 'Show', admin_contact_path(admin_contact) %></td>
-    <td><%= link_to 'Edit', edit_admin_contact_path(admin_contact) %></td>
-    <td><%= link_to 'Destroy', admin_contact_path(admin_contact), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= contact.bio %></td>
+    <td><%= contact.phone %></td>
+    <td><%= contact.email %></td>
+    <td><%= link_to 'Show', admin_contact_path(contact) %></td>
+    <td><%= link_to 'Edit', edit_admin_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', admin_contact_path(contact), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

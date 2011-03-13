@@ -1,9 +1,11 @@
 Mdmusic::Application.routes.draw do
 
-  resources :clients do
-		resources :videos
-	end
-  resources :contacts
+  namespace :admin do
+    resources :contacts
+    resources :clients do
+		  resources :videos
+	  end
+  end
 
   get "home/index"
 

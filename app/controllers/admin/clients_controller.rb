@@ -44,10 +44,10 @@ class Admin::ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        format.html { redirect_to(@client, :notice => 'Client was successfully created.') }
+        format.html { redirect_to([:admin, @client], :notice => 'Client was successfully created.') }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :controller => "admin/clients" }
         format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
       end
     end
@@ -60,10 +60,10 @@ class Admin::ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.update_attributes(params[:client])
-        format.html { redirect_to(@client, :notice => 'Client was successfully updated.') }
+        format.html { redirect_to([:admin, @client], :notice => 'Client was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :controller => "admin/clients" }
         format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
       end
     end
@@ -76,7 +76,7 @@ class Admin::ClientsController < ApplicationController
     @client.destroy
 
     respond_to do |format|
-      format.html { redirect_to(clients_url) }
+      format.html { redirect_to(admin_clients_url) }
       format.xml  { head :ok }
     end
   end

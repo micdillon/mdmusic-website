@@ -13,13 +13,13 @@
   <tr>
     <td><%= client.name %></td>
     <td><%= client.description %></td>
-    <td><%= link_to 'Show', client %></td>
-    <td><%= link_to 'Edit', edit_client_path(client) %></td>
-    <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_client_path(client) %></td>
+    <td><%= link_to 'Edit', edit_admin_client_path(client) %></td>
+    <td><%= link_to 'Destroy', admin_client_path(client), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'New Client', new_admin_client_path %>
