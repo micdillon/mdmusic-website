@@ -1,0 +1,6 @@
+$('.video-link').each(function(index, video){
+  $(video).bind('ajax:success', function(type, data, status, xhr){
+		$('#video-area').html(data);
+  });
+});
+
