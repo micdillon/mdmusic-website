@@ -12,9 +12,21 @@ pre {
   font-size: 11px;
 }
 
+/*
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
+*/
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:visited { color: #333; }
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -108,6 +120,8 @@ div#contact-link a:hover {
 	text-decoration: none;
 }
 
+/*** Contact Area ***/
+
 div#contact-area {
 	position:absolute;
 	top:0px;
@@ -124,6 +138,8 @@ div#contact-area p
 	line-height:12px;
 }
 
+/*** AFP Area ***/
+
 div#afp-area {
 	position:absolute;
 	top:240px;
@@ -134,3 +150,31 @@ div#afp-area {
 	line-height:12px;
 }
 
+div.client-name {
+  display: inline;
+  padding-right: 15px;
+  font-size: 11px;
+	color: #5C5C5C;
+  font-weight:bold;
+}
+
+div.client-multivids {
+  display: inline;
+  padding-right: 0px;
+  font-size: 11px;
+	color: #333;
+  font-weight:bold;
+}
+
+div.client-video {
+  display: inline;
+  padding-right: 0px;
+  font-size: 11px;
+	color: #333;
+  font-weight:bold;
+}
+
+div.client-spacer {
+  display: inline;
+  padding-right:15px;
+}

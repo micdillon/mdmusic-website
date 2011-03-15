@@ -1,4 +1,24 @@
 <% @clients.each do |client| %>
-  <%= client.name %>
+  <% if client.videos.count > 1 %>
+    <div class="client-multivids"><%= client.name %> :</div>
+    <% cnt = 0 %>
+    <% ch = ?A %>
+    <% client.videos.each do |video| %>
+      <% path_str = '/afp/video/' + video.id.to_s %>
+      <div class="client-video"><%= link_to ch.chr, path_str, :remote => true, 'data-type' => 'html', :class => 'video-link' %></div>
+      <% if cnt < client.videos.count - 1 %>
+        |
+      <% else %>
+        <div class="client-spacer"></div>
+      <% end %>
+      <% cnt = cnt + 1 %>
+      <% ch = ch + 1 %>
+    <% end %>
+  <% else %>
+    <% path_str = '/afp/video/' + client.videos.first.id.to_s %>
+    <div class="client-name"><%= link_to client.name, path_str, :remote => true, 'data-type' => 'html', :class => 'video-link' %></div>
+  <% end %>
 <% end %>
 
+<div id="video-area"></div>
+<script><%= render "index.js" %></script>
