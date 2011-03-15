@@ -16,3 +16,12 @@ $('#afp').bind('ajax:success', function(type, data, status, xhr){
 	}
 });
 
+$('#discog').bind('ajax:success', function(type, data, status, xhr){
+	var area = $('#discog-area');
+	if(area.html() == ''){
+		area.html(data);
+	}else{
+		area.html('');
+	}
+});
+

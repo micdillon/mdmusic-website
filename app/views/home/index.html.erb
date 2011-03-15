@@ -1,6 +1,9 @@
 <%= image_tag "mdlogo.jpg", :id => "logo" %>
 
-<div id="discog-link">Discography</div>
+<div id="discog-link">
+	<%= link_to "Discography", discog_frontend_path, :remote => true, 'data-type' => 'html', :id => 'discog' %>
+</div>
+<div id="discog-area"></div>
 
 <div id="afp-link">
 	<%= link_to "Audio For Pictures", afp_frontend_path, :remote => true, 'data-type' => 'html', :id => 'afp' %>

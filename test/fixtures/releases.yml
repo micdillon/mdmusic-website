@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  cover_image: MyString
+  release_date: 2011-03-15
+  project: 
+
+two:
+  name: MyString
+  cover_image: MyString
+  release_date: 2011-03-15
+  project: 

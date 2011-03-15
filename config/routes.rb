@@ -2,6 +2,7 @@ Mdmusic::Application.routes.draw do
 
 	match 'contact_frontend' => 'contacts#frontend'
 	match 'afp_frontend' => 'afp#frontend'
+	match 'discog_frontend' => 'discog#frontend'
 	match '/afp/video/:id' => 'afp#video'
 
   namespace :admin do
@@ -9,9 +10,20 @@ Mdmusic::Application.routes.draw do
     resources :clients do
 		  resources :videos
 	  end
+    resources :projects do
+      resources :releases do
+        resources :tracks
+        resources :buylinks
+      end
+    end
   end
 
   get "home/index"
+  get "project/index"
+  get "project/new"
+  get "project/edit"
+  get "project/show"
+  get "discog/frontend"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
