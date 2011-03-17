@@ -1,0 +1,18 @@
+<h1>Listing Tracks for <%= @release.name %>:</h1>
+
+<div class="list">
+<% @tracks.each do |track| %>
+  <div class="list-row">
+    <div class="list-item"><%= track.name %></div>
+    <div class="list-item-links">
+      <%= link_to 'Show', [:admin, @project, @release, track] %> |
+      <%= link_to 'Edit', [:edit, :admin, @project, @release, track] %> |
+      <%= link_to 'Destroy', [:admin, @project, @release, track], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<%= link_to 'New Track', [:new, :admin, @project, @release, :track] %> | 
+<%= link_to 'Show Releases', [:admin, @project, :releases ] %>
+

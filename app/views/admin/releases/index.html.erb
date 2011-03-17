@@ -1,0 +1,16 @@
+<h1>Listing Releases for <%= @project.name %>:</h1>
+
+<div class="list">
+<% @releases.each do |release| %>
+  <div class="list-row">
+    <div class="list-item"><%= release.name %></div>
+    <div class="list-item-links">
+      <%= link_to 'Show', [:admin, @project, release] %> |
+      <%= link_to 'Edit', [:edit, :admin, @project, release] %> |
+      <%= link_to 'Destroy', [:admin, @project, release], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+</div>
+<%= link_to 'New Release', [:new, :admin, @project, :release] %>
+

@@ -1,5 +1,11 @@
 Mdmusic::Application.routes.draw do
 
+  get "buylinks/index"
+
+  get "tracks/index"
+
+  get "releases/index"
+
 	match 'contact_frontend' => 'contacts#frontend'
 	match 'afp_frontend' => 'afp#frontend'
 	match 'discog_frontend' => 'discog#frontend'

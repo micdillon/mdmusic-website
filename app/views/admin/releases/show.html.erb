@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "release" %>
+
+<%= link_to 'Tracks', [:admin, @project, @release, :tracks] %> |
+<%= link_to 'Buylinks', [:admin, @project, @release, :buylinks] %> |
+<%= link_to 'Edit', [:edit, :admin, @project, @release] %> |
+<%= link_to 'Back', [:admin, @project, :releases] %>
+

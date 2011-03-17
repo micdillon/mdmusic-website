@@ -1,0 +1,18 @@
+<h1>Listing Buylinks for <%= @release.name %>:</h1>
+
+<div class="list">
+<% @buylinks.each do |buylink| %>
+  <div class="list-row">
+    <div class="list-item"><%= buylink.name %></div>
+    <div class="list-item-links">
+      <%= link_to 'Show', [:admin, @project, @release, buylink] %> |
+      <%= link_to 'Edit', [:edit, :admin, @project, @release, buylink] %> |
+      <%= link_to 'Destroy', [:admin, @project, @release, buylink], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<%= link_to 'New Buylink', [:new, :admin, @project, @release, :buylink] %> | 
+<%= link_to 'Show Releases', [:admin, @project, :releases ] %>
+

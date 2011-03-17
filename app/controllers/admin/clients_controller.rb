@@ -1,4 +1,6 @@
 class Admin::ClientsController < ApplicationController
+  layout "admin"
+
   # GET /clients
   # GET /clients.xml
   def index

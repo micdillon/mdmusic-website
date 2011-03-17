@@ -1,17 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.desc %>
-</p>
+<%= render "project" %>
 
 <%= link_to 'Releases', [:admin, @project, :releases] %> |
-
 <%= link_to 'Edit', [:edit, :admin, @project] %> |
-<%= link_to 'Back', admin_project_path %>
+<%= link_to 'Back', admin_projects_path %>
 

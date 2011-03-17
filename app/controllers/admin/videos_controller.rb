@@ -1,4 +1,5 @@
 class Admin::VideosController < ApplicationController
+  layout "admin"
 
   def index
     @client = Client.find(params[:client_id])

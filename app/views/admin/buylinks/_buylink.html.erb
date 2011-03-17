@@ -1,0 +1,11 @@
+<div class="display-block">
+<% @buylink.attribute_names.each do |name| %>
+  <div class="list-row">
+    <div class="list-item"><b><%= name %>:</b></div>
+    <div class="list-item-links">
+      <div class="right-block"><%= @buylink.send(name) %></div>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+<% end %>
+<div>

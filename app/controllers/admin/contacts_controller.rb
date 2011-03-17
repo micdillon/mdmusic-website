@@ -1,4 +1,6 @@
 class Admin::ContactsController < ApplicationController
+  layout "admin"
+
   # GET /contacts
   # GET /contacts.xml
   def index
