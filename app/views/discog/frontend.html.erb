@@ -1,2 +1,30 @@
-<h1>Discog#frontend</h1>
-<p>Find me in app/views/discog/frontend.html.erb</p>
+<% @projects.each do |project| %>
+
+  <div class="project-heading"><%= project.name %> <span class="project-info" title="<%= project.desc%>">info...</span></div>
+
+  <% project.releases.order("release_date DESC").each do |release| %>
+
+    <div class="release-area">
+      <div class="release-heading"><%= release.name %></div>
+      <div class="tracks-area">
+      <% release.tracks.order("number ASC").each do |track| %>
+        <div class="track-name"><%= track.number %> : <%= track.name %></div>
+      <% end %>
+      </div>
+      <% if release.buylinks.count > 0 %>
+        <div class="purchase-text">Purchase this Release At:</div>
+        <% release.buylinks.order("name ASC").each do |buylink| %>
+          <div class="buylink-name">&bull; <%= buylink.name %></div>
+        <% end %>
+      <% end %>
+      <% if not release.cover_image.empty? %>
+        <div class="cover-image-area"><img src="<%= release.cover_image %>" /></div>
+      <% end %>
+    </div>
+  <% end %>
+  <div style="clear:both;"></div>
+
+  <div>&nbsp;</div>
+
+<% end %>
+

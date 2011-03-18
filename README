@@ -1,5 +1,10 @@
 == MDMusic
 
-This is the Ruby On Rails implementation of my website. Nothing special. 
+This is the Ruby On Rails implementation of my website. Nothing special.
 
+Todo:
+- implement project info popup
+- implement audio player
+- implement discog scrolling (maybe).
+- unify text sizes between sections
 

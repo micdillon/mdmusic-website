@@ -178,3 +178,53 @@ div.client-spacer {
   display: inline;
   padding-right:15px;
 }
+
+/*** Discog Area ***/
+
+div#discog-area {
+  position: absolute;
+  top:240px;
+  left:40px;
+  width:400px;
+}
+
+div.project-heading {
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+span.project-info {
+	color: #B0B0B0;
+  font-size: 8px;
+  text-transform: lowercase;
+}
+
+div.release-area {
+  display: inline;
+  float: right;
+  width: 200px;
+  font-size: 10px;
+}
+div.release-heading {
+  font-size: 11px;
+}
+div.tracks-area {
+  padding-bottom: 1em;
+}
+div.track-name {
+	color: #A0A0A0;
+}
+
+div.purchase-text {
+	color: #A0A0A0;
+}
+div.buylink-name {
+  display: inline;
+}
+
+div.cover-image-area {
+  padding-top: 0.5em;
+}
+div.cover-image-area img {
+  width:100px;
+}
+

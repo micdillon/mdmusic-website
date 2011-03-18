@@ -2,7 +2,7 @@ class Admin::ProjectsController < ApplicationController
   layout "admin"
 
   def index
-    @projects = Project.all
+    @projects = Project.all(:order => "name ASC")
 
     respond_to do |format|
       format.html # index.html.erb
