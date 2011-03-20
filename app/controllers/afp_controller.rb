@@ -1,7 +1,7 @@
 class AfpController < ApplicationController
 
 	def frontend
-		@clients = Client.all
+		@clients = Client.all(:order => "name ASC")
 		render 'frontend', :layout => false
 	end
 

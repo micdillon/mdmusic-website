@@ -1,0 +1,17 @@
+<% if track.audio_url.empty? %>
+
+  <div class="track-name"><%= track.number %> : <%= track.name %></div>
+
+<% else %>
+
+  <div class="track-name">
+    <%= track.number %> : <span class="with-audio"><%= track.name %></span>
+    <div href="<%= track.audio_url %>" class="item">
+      <div class="inlinelich">
+        <div class="btn play"></div>
+      </div>
+      <div class="player inactive"></div>
+    </div>
+  </div>
+
+<% end %>

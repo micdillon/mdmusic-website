@@ -8,17 +8,17 @@
       <div class="release-heading"><%= release.name %></div>
       <div class="tracks-area">
       <% release.tracks.order("number ASC").each do |track| %>
-        <div class="track-name"><%= track.number %> : <%= track.name %></div>
+        <%= render :partial => "track", :locals => { :track => track } %>
       <% end %>
       </div>
       <% if release.buylinks.count > 0 %>
         <div class="purchase-text">Purchase this Release At:</div>
         <% release.buylinks.order("name ASC").each do |buylink| %>
-          <div class="buylink-name">&bull; <%= buylink.name %></div>
+          <div class="buylink-name">&bull; <%= link_to buylink.name, buylink.url, :target => '_blank' %></div>
         <% end %>
       <% end %>
       <% if not release.cover_image.empty? %>
-        <div class="cover-image-area"><img src="<%= release.cover_image %>" /></div>
+        <div class="cover-image-area"><%= image_tag release.cover_image %></div>
       <% end %>
     </div>
   <% end %>
@@ -27,4 +27,6 @@
   <div>&nbsp;</div>
 
 <% end %>
+
+<script><%= render "discog.js" %></script>
 

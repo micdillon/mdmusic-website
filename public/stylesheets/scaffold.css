@@ -3,7 +3,7 @@ body { background-color: #fff; color: #333; }
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
-  line-height: 18px;
+  line-height: 15px;
 }
 
 pre {
@@ -12,19 +12,13 @@ pre {
   font-size: 11px;
 }
 
-/*
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-*/
-
 a {
 	color: #333;
 	text-decoration: none;
 }
 a:visited { color: #333; }
 a:hover {
-	color: #333;
+	color: #A0A0A0;
 	text-decoration: none;
 }
 
@@ -81,28 +75,12 @@ div#discog-link {
 	left:350px;
 	font-size:14px;
 }
-div#discog-link a {
-	text-decoration: none;
-}
-div#discog-link a:hover {
-	background-color: #FFFFFF;
-	color: #000000;
-	text-decoration: none;
-}
 
 div#afp-link {
 	position:absolute;
 	top:200px;
 	left:451px;
 	font-size:14px;
-}
-div#afp-link a {
-	text-decoration: none;
-}
-div#afp-link a:hover {
-	background-color: #FFFFFF;
-	color: #000000;
-	text-decoration: none;
 }
 
 div#contact-link {
@@ -111,13 +89,11 @@ div#contact-link {
 	left:594px;
 	font-size:14px;
 }
-div#contact-link a {
-	text-decoration: none;
-}
-div#contact-link a:hover {
-	background-color: #FFFFFF;
-	color: #000000;
-	text-decoration: none;
+
+/*** MDMUSIC ***/
+.mdstrong {
+  color: #333;
+  font-size: 11px;
 }
 
 /*** Contact Area ***/
@@ -129,13 +105,6 @@ div#contact-area {
 	width:400px;
 	color: #A0A0A0;
 	font-size:10px;
-	line-height:12px;
-}
-
-div#contact-area p
-{
-	font-size:10px;
-	line-height:12px;
 }
 
 /*** AFP Area ***/
@@ -148,14 +117,16 @@ div#afp-area {
 	color: #A0A0A0;
 	font-size:10px;
 	line-height:12px;
+  padding-bottom:0.8em;
 }
 
 div.client-name {
   display: inline;
   padding-right: 15px;
   font-size: 11px;
-	color: #5C5C5C;
-  font-weight:bold;
+	color: #333;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
 }
 
 div.client-multivids {
@@ -163,20 +134,22 @@ div.client-multivids {
   padding-right: 0px;
   font-size: 11px;
 	color: #333;
-  font-weight:bold;
+  text-transform: uppercase;
 }
 
 div.client-video {
   display: inline;
   padding-right: 0px;
   font-size: 11px;
-	color: #333;
-  font-weight:bold;
 }
 
 div.client-spacer {
   display: inline;
   padding-right:15px;
+}
+
+div.video-area {
+  padding-top: 0.8em;
 }
 
 /*** Discog Area ***/
@@ -206,12 +179,16 @@ div.release-area {
 }
 div.release-heading {
   font-size: 11px;
+  color: #333;
 }
 div.tracks-area {
   padding-bottom: 1em;
 }
 div.track-name {
 	color: #A0A0A0;
+}
+span.with-audio {
+  color:#333;
 }
 
 div.purchase-text {

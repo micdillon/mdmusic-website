@@ -1,10 +1,10 @@
 <p><%= raw @video.embed_code%></p>
 
-<p><b><%= @video.title %></b></p>
-<p><b>Description of intent:</b> <%= @video.description %></p>
+<p><span class="mdstrong"><%= @video.title %></span></p>
+<p><span class="mdstrong">Description of intent:</span> <%= @video.description %></p>
 
 <p>
-<div>Client: <b><%= @video.client.name %></b></div>
-<div>Agency: <b><%= @video.agency %></b></div>
-<div>Producer: <b><%= @video.producer %></b></div>
+<div>Client: <span class="mdstrong"><%= @video.client.name %></span></div>
+<div>Agency: <span class="mdstrong"><%= @video.agency %></span></div>
+<div>Producer: <span class="mdstrong"><%= @video.producer %></span></div>
 </p>

@@ -1,27 +1,31 @@
-$('#contact').bind('ajax:success', function(type, data, status, xhr){
-	var area = $('#contact-area');
-	if(area.html() == ''){
-		area.html(data);
-	}else{
-		area.html('');
-	}
-});
+$(document).ready(function(){
 
-$('#afp').bind('ajax:success', function(type, data, status, xhr){
-	var area = $('#afp-area');
-	if(area.html() == ''){
-		area.html(data);
-	}else{
-		area.html('');
-	}
-});
+  $('#contact').bind('ajax:success', function(type, data, status, xhr){
+	  var area = $('#contact-area');
+	  if(area.html() == ''){
+		  area.html(data);
+	  }else{
+		  area.html('');
+	  }
+  });
 
-$('#discog').bind('ajax:success', function(type, data, status, xhr){
-	var area = $('#discog-area');
-	if(area.html() == ''){
-		area.html(data);
-	}else{
-		area.html('');
-	}
-});
+  $('#afp').bind('ajax:success', function(type, data, status, xhr){
+	  var area = $('#afp-area');
+	  if(area.html() == ''){
+		  area.html(data);
+	  }else{
+		  area.html('');
+	  }
+  });
+
+  $('#discog').bind('ajax:success', function(type, data, status, xhr){
+	  var area = $('#discog-area');
+	  if(area.html() == ''){
+		  area.html(data);
+	  }else{
+		  area.html('');
+	  }
+  });
+
+}); // end document.ready()
 
