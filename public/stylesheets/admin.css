@@ -13,7 +13,7 @@ pre {
 }
 
 h1 {
-  padding-bottom:20px;
+  padding-bottom:0px;
 }
 
 a {
@@ -27,6 +27,10 @@ a:hover {
 	text-decoration: none;
 }
 
+div.breadcrumb {
+  padding-bottom: 20px;
+  font-size: x-small;
+}
 
 div.list {
   padding-bottom:10px;

@@ -1,6 +1,7 @@
 <% @projects.each do |project| %>
 
-  <div class="project-heading"><%= project.name %> <span class="project-info" title="<%= project.desc%>">info...</span></div>
+  <div class="project-heading"><%= project.name %></div>
+  <div class="project-desc"><%= project.desc %></div>
 
   <% project.releases.order("release_date DESC").each do |release| %>
 

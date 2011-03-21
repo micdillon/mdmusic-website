@@ -1,15 +1,10 @@
 Mdmusic::Application.routes.draw do
 
-  get "buylinks/index"
-
-  get "tracks/index"
-
-  get "releases/index"
-
 	match 'contact_frontend' => 'contacts#frontend'
 	match 'afp_frontend' => 'afp#frontend'
 	match 'discog_frontend' => 'discog#frontend'
 	match '/afp/video/:id' => 'afp#video'
+  match 'admin' => 'admin#index'
 
   namespace :admin do
     resources :contacts
@@ -24,12 +19,17 @@ Mdmusic::Application.routes.draw do
     end
   end
 
-  get "home/index"
+  get "admin/index"
+  get "buylinks/index"
+  get "tracks/index"
+  get "releases/index"
   get "project/index"
   get "project/new"
   get "project/edit"
   get "project/show"
   get "discog/frontend"
+
+  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

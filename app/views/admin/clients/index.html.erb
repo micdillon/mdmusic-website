@@ -1,26 +1,19 @@
-<h1>Listing clients</h1>
+<h1>Listing Clients:</h1>
+<% @apath = [:admin]%>
+<%= render "/admin/breadcrumb" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="list">
 <% @clients.each do |client| %>
-  <tr>
-    <td><%= client.name %></td>
-    <td><%= client.description %></td>
-    <td><%= link_to 'Show', admin_client_path(client) %></td>
-    <td><%= link_to 'Edit', edit_admin_client_path(client) %></td>
-    <td><%= link_to 'Destroy', [:admin, client], :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="list-row">
+    <div class="list-item"><%= client.name %></div>
+    <div class="list-item-links">
+      <%= link_to 'Show', admin_client_path(client) %> |
+      <%= link_to 'Edit', edit_admin_client_path(client) %> |
+      <%= link_to 'Destroy', [:admin, client], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
 <% end %>
-</table>
-
+</div>
 <br />
-
 <%= link_to 'New Client', new_admin_client_path %>
 

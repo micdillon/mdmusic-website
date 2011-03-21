@@ -3,11 +3,13 @@
 This is the Ruby On Rails implementation of my website. Nothing special.
 
 Todo:
-- play links
-- project info
 - discog scrolling (maybe).
+- clean up admin interface
+  - breadcrumbs
 
 Done:
 (x) audio player
 (x) unify text sizes between sections
+(x) play links
+(x) project info
 

@@ -158,23 +158,22 @@ div#discog-area {
   position: absolute;
   top:240px;
   left:40px;
-  width:400px;
+  width:387px;
 }
 
 div.project-heading {
   text-transform: uppercase;
   padding-bottom: 0.5em;
 }
-span.project-info {
+div.project-desc {
+  padding-bottom:0.8em;
 	color: #B0B0B0;
-  font-size: 8px;
-  text-transform: lowercase;
 }
 
 div.release-area {
   display: inline;
   float: right;
-  width: 200px;
+  width: 193px;
   font-size: 10px;
 }
 div.release-heading {

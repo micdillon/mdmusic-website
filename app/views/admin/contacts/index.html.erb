@@ -1,28 +1,19 @@
-<h1>Listing contacts</h1>
+<h1>Listing Contacts:</h1>
 
-<table>
-  <tr>
-    <th>Bio</th>
-    <th>Phone number</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% debug @contacts %>
+<div class="list">
 <% @contacts.each do |contact| %>
-  <tr>
-    <td><%= contact.bio %></td>
-    <td><%= contact.phone %></td>
-    <td><%= contact.email %></td>
-    <td><%= link_to 'Show', admin_contact_path(contact) %></td>
-    <td><%= link_to 'Edit', edit_admin_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', admin_contact_path(contact), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="list-row">
+    <div class="list-item">
+      <%= contact.bio %><br /><br />
+      <%= contact.phone %><br />
+      <%= contact.email %>
+    </div>
+    <div class="list-item-links">
+      <%= link_to 'Show', admin_contact_path(contact) %> |
+      <%= link_to 'Edit', edit_admin_contact_path(contact) %> |
+      <%= link_to 'Destroy', [:admin, contact], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
 <% end %>
-</table>
-
 <br />
-
 <%= link_to 'New Contact', new_admin_contact_path %>

@@ -1,0 +1,5 @@
+<div class="breadcrumb">
+  <% @apath.reverse.each do |node| %>
+    <%= link_to h(node), node %> &gt;
+  <% end %>
+</div>
