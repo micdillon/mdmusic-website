@@ -68,6 +68,15 @@ img#logo {
 	top:120px;
 	left:290px;
 }
+div#mjd-music {
+  position:absolute;
+  top: 155px;
+  left: 447px;
+  width: 247px;
+  z-index: 100;
+  color: #E0E0E0;
+  text-align: justify;
+}
 
 div#discog-link {
 	position:absolute;
@@ -79,14 +88,14 @@ div#discog-link {
 div#afp-link {
 	position:absolute;
 	top:200px;
-	left:451px;
+	left:447px;
 	font-size:14px;
 }
 
 div#contact-link {
 	position:absolute;
 	top:200px;
-	left:594px;
+	left:580px;
 	font-size:14px;
 }
 
@@ -101,7 +110,7 @@ div#contact-link {
 div#contact-area {
 	position:absolute;
 	top:0px;
-	left:594px;
+	left:580px;
 	width:400px;
 	color: #A0A0A0;
 	font-size:10px;
@@ -112,7 +121,7 @@ div#contact-area {
 div#afp-area {
 	position:absolute;
 	top:240px;
-	left:451px;
+	left:447px;
 	width:400px;
 	color: #A0A0A0;
 	font-size:10px;
