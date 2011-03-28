@@ -18,7 +18,7 @@ a {
 }
 a:visited { color: #333; }
 a:hover {
-	color: #A0A0A0;
+	color: #B0B0B0;
 	text-decoration: none;
 }
 
@@ -74,7 +74,7 @@ div#mjd-music {
   left: 447px;
   width: 247px;
   z-index: 100;
-  color: #E0E0E0;
+  color: #B0B0B0;
   text-align: justify;
 }
 
@@ -112,7 +112,7 @@ div#contact-area {
 	top:0px;
 	left:580px;
 	width:450px;
-	color: #A0A0A0;
+	color: #B0B0B0;
 	font-size:10px;
 }
 
@@ -123,7 +123,7 @@ div#afp-area {
 	top:240px;
 	left:447px;
 	width:400px;
-	color: #A0A0A0;
+	color: #B0B0B0;
 	font-size:10px;
 	line-height:12px;
   padding-bottom:0.8em;
@@ -193,14 +193,14 @@ div.tracks-area {
   padding-bottom: 1em;
 }
 div.track-name {
-	color: #A0A0A0;
+	color: #B0B0B0;
 }
 span.with-audio {
   color:#333;
 }
 
 div.purchase-text {
-	color: #A0A0A0;
+	color: #B0B0B0;
 }
 div.buylink-name {
   display: inline;
