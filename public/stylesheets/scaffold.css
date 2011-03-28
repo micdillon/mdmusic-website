@@ -127,6 +127,7 @@ div#afp-area {
 	font-size:10px;
 	line-height:12px;
   padding-bottom:0.8em;
+  padding-top:0.8em;
 }
 
 div.client-name {
@@ -173,17 +174,18 @@ div#discog-area {
 div.project-heading {
   text-transform: uppercase;
   padding-bottom: 0.5em;
+  padding-top: 0.8em;
 }
 div.project-desc {
-  padding-bottom:0.8em;
 	color: #B0B0B0;
 }
 
 div.release-area {
   display: inline;
-  float: right;
+  float: left;
   width: 193px;
   font-size: 10px;
+  padding-top:0.8em;
 }
 div.release-heading {
   font-size: 11px;
@@ -211,5 +213,6 @@ div.cover-image-area {
 }
 div.cover-image-area img {
   width:100px;
+  opacity:0.75;
 }
 
