@@ -3,31 +3,45 @@
   <div class="project-heading"><%= project.name %></div>
   <div class="project-desc"><%= raw project.desc %></div>
 
-  <% project.releases.order("release_date DESC").each do |release| %>
+  <% release_arr = create_release_rows(project.releases) %>
+  <% release_arr.each do |row| %>
 
-    <div class="release-area">
-      <div class="release-heading"><%= release.name %></div>
-      <div class="tracks-area">
-      <% release.tracks.order("number ASC").each do |track| %>
-        <%= render :partial => "track", :locals => { :track => track } %>
-      <% end %>
-      </div>
-      <% if release.buylinks.count > 0 %>
-        <div class="purchase-text">Purchase this Release At:</div>
-        <% release.buylinks.order("name ASC").each do |buylink| %>
-          <div class="buylink-name">&bull; <%= link_to buylink.name, buylink.url, :target => '_blank' %></div>
+    <% track_max = get_track_max(row[0], row[1]) %>
+    <% row.each do |release| %>
+
+      <% if release != nil %>
+    
+      <div class="release-area">
+        <div class="release-heading"><%= release.name %></div>
+        <div class="tracks-area">
+        <% release.tracks.order("number ASC").each do |track| %>
+          <%= render :partial => "track", :locals => { :track => track } %>
         <% end %>
-      <% end %>
-      <% if not release.cover_image.empty? %>
-        <div class="cover-image-area"><%= image_tag release.cover_image %></div>
-      <% end %>
-    </div>
-  <% end %>
-  <div style="clear:both;"></div>
+        <% (track_max - release.tracks.count).times do %>
+          <%= render :partial => "track", :locals => { :track => nil } %>
+        <% end %>
+        </div>
+        <% if release.buylinks.count > 0 %>
+          <div class="purchase-text">Purchase this Release At:</div>
+          <% release.buylinks.order("name ASC").each do |buylink| %>
+            <div class="buylink-name">&bull; <%= link_to buylink.name, buylink.url, :target => '_blank' %></div>
+          <% end %>
+        <% end %>
+        <% if not release.cover_image.empty? %>
+          <div class="cover-image-area"><%= image_tag release.cover_image %></div>
+        <% end %>
+      </div>
 
+      <% end # if release %>
+
+    <% end # release loop %>
+
+  <% end # row loop %>
+
+  <div style="clear:both;"></div>
   <div>&nbsp;</div>
 
-<% end %>
+<% end # project loop %>
 
 <script><%= render "discog.js" %></script>
 
