@@ -1,7 +1,7 @@
 <p><%= raw @video.embed_code%></p>
 
 <p><span class="mdstrong"><%= @video.title %></span></p>
-<p><span class="mdstrong">Description of intent:</span> <%= @video.description %></p>
+<p><span class="mdstrong">Description of intent:</span> <%= raw @video.description %></p>
 
 <p>
 <div>Client: <span class="mdstrong"><%= @video.client.name %></span></div>
