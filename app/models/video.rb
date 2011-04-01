@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-  belongs_to :client
+  belongs_to :video_group
 end

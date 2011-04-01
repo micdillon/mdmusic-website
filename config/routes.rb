@@ -8,7 +8,7 @@ Mdmusic::Application.routes.draw do
 
   namespace :admin do
     resources :contacts
-    resources :clients do
+    resources :video_groups do
 		  resources :videos
 	  end
     resources :projects do

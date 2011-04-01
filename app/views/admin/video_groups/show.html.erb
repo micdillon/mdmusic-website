@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @video_group.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @video_group.description %>
+</p>
+
+<%= link_to 'Videos', [:admin, @video_group, :videos] %> |
+
+<%= link_to 'Edit', [:edit, :admin, @video_group] %> |
+<%= link_to 'Back', admin_video_groups_path %>
+

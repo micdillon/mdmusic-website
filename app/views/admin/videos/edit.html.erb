@@ -1,6 +1,6 @@
-<h1>Editing <%= @client.name %>'s Video</h1>
+<h1>Editing <%= @video_group.name %>'s Video</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @client, @video] %> |
-<%= link_to 'Back', [:admin, @client, :videos] %>
+<%= link_to 'Show', [:admin, @video_group, @video] %> |
+<%= link_to 'Back', [:admin, @video_group, :videos] %>

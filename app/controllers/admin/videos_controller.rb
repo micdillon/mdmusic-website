@@ -2,27 +2,27 @@ class Admin::VideosController < ApplicationController
   layout "admin"
 
   def index
-    @client = Client.find(params[:client_id])
-    @videos = @client.videos
+    @video_group = VideoGroup.find(params[:video_group_id])
+    @videos = @video_group.videos
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @clients }
+      format.xml  { render :xml => @video_groups }
     end
   end
 
   def show
-    @client = Client.find(params[:client_id])
+    @video_group = VideoGroup.find(params[:video_group_id])
     @video = Video.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @client }
+      format.xml  { render :xml => @video_group }
     end
   end
 
   def new
-    @client = Client.find(params[:client_id])
+    @video_group = VideoGroup.find(params[:video_group_id])
     @video = Video.new
 
     respond_to do |format|
@@ -32,18 +32,18 @@ class Admin::VideosController < ApplicationController
   end
 
   def edit
-    @client = Client.find(params[:client_id])
+    @video_group = VideoGroup.find(params[:video_group_id])
     @video = Video.find(params[:id])
   end
 
   def create
-    @client = Client.find(params[:client_id])
-    @video = @client.videos.create(params[:video])
+    @video_group = VideoGroup.find(params[:video_group_id])
+    @video = @video_group.videos.create(params[:video])
     
-    #redirect_to admin_client_path(@client)
+    #redirect_to admin_video_group_path(@video_group)
     respond_to do |format|
       if @video.save
-        format.html { redirect_to([:admin, @client, @video], :notice => 'Client was successfully created.') }
+        format.html { redirect_to([:admin, @video_group, @video], :notice => 'VideoGroup was successfully created.') }
         format.xml  { render :xml => @video, :status => :created, :location => @video }
       else
         format.html { render :action => "new", :controller => "admin/videos" }
@@ -53,12 +53,12 @@ class Admin::VideosController < ApplicationController
   end
 
   def update
-    @client = Client.find(params[:client_id])
+    @video_group = VideoGroup.find(params[:video_group_id])
     @video = Video.find(params[:id])
 
     respond_to do |format|
       if @video.update_attributes(params[:video])
-        format.html { redirect_to([:admin, @client, @video], :notice => 'Client was successfully updated.') }
+        format.html { redirect_to([:admin, @video_group, @video], :notice => 'VideoGroup was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit", :controller => "admin/videos" }
@@ -68,12 +68,12 @@ class Admin::VideosController < ApplicationController
   end
 
   def destroy
-    @client = Client.find(params[:client_id])
+    @video_group = VideoGroup.find(params[:video_group_id])
     @video = Video.find(params[:id]);
     @video.destroy
 
     respond_to do |format|
-      format.html { redirect_to([:admin, @client, :videos]) }
+      format.html { redirect_to([:admin, @video_group, :videos]) }
       format.xml  { head :ok }
     end
   end

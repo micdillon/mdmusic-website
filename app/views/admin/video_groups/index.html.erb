@@ -1,0 +1,19 @@
+<h1>Listing Video Groups:</h1>
+<% @apath = [:admin]%>
+<%= render "/admin/breadcrumb" %>
+
+<div class="list">
+<% @video_groups.each do |group| %>
+  <div class="list-row">
+    <div class="list-item"><%= group.name %></div>
+    <div class="list-item-links">
+      <%= link_to 'Show', admin_video_group_path(group) %> |
+      <%= link_to 'Edit', edit_admin_video_group_path(group) %> |
+      <%= link_to 'Destroy', [:admin, group], :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+</div>
+<br />
+<%= link_to 'New Video Group', new_admin_video_group_path %>
+

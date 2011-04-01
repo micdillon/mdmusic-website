@@ -130,7 +130,7 @@ div#afp-area {
   padding-top:0.8em;
 }
 
-div.client-name {
+div.video-group-name {
   display: inline;
   padding-right: 15px;
   font-size: 11px;
@@ -139,7 +139,7 @@ div.client-name {
   padding-bottom: 0.5em;
 }
 
-div.client-multivids {
+div.video-group-multivids {
   display: inline;
   padding-right: 0px;
   font-size: 11px;
@@ -147,13 +147,13 @@ div.client-multivids {
   text-transform: uppercase;
 }
 
-div.client-video {
+div.video-group-video {
   display: inline;
   padding-right: 0px;
   font-size: 11px;
 }
 
-div.client-spacer {
+div.video-group-spacer {
   display: inline;
   padding-right:15px;
 }
