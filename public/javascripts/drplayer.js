@@ -194,7 +194,7 @@ $(window).unload(function() {
             
         },
         next: function() {
-            return this.each(function() {
+            /*return this.each(function() {
                 var el = $(this);
                 var items = el.find(".item")
                 var index = -1;
@@ -209,10 +209,10 @@ $(window).unload(function() {
                     var next = $(items[index + 1]); 
                     playTrack(next, $(el).data("id"));
                 }
-            });
+            });*/
         },
         prev: function() {
-            return this.each(function() {
+            /*return this.each(function() {
                 var el = $(this);
                 var items = el.find(".item")
                 var index = -1;
@@ -227,7 +227,7 @@ $(window).unload(function() {
                     var prev = $(items[index - 1]); 
                     playTrack(prev, $(el).data("id"));
                 }
-            });
+            });*/
         },
         pause:function() {
             return this.each(function() {
@@ -237,7 +237,6 @@ $(window).unload(function() {
         },
 
         play:function() {
-            console.trace();
             return this.each(function() {
                 var el = $(this);
                 if ($(el).find(".current").length == 0) {
