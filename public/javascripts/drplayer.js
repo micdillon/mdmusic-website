@@ -194,6 +194,7 @@ $(window).unload(function() {
             
         },
         next: function() {
+            stop($(this))
             /*return this.each(function() {
                 var el = $(this);
                 var items = el.find(".item")
@@ -212,6 +213,7 @@ $(window).unload(function() {
             });*/
         },
         prev: function() {
+            stop($(this))
             /*return this.each(function() {
                 var el = $(this);
                 var items = el.find(".item")
