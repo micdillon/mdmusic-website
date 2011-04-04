@@ -2,5 +2,5 @@
 <p>
   <div>For work requests and inquiries:</div>
 	<div><%= @contact.phone %></div>
-	<div><%= @contact.email %></div>
+	<div><a href="mailto:<%= @contact.email %>"><%= @contact.email %></a></div>
 </p>
